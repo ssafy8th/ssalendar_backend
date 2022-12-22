@@ -1,5 +1,6 @@
 package com.ssafy.ssalendar;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,8 @@ public class TestController {
 
     @GetMapping("")
     public ResponseEntity<String> getTest(){
-        return new ResponseEntity<String>("안녕하세요", HttpStatus.OK);
+        HttpHeaders resHeaders = new HttpHeaders();
+        resHeaders.add("Content-Type", "application/json;charset=UTF-8");
+        return new ResponseEntity<String>("안녕하세요", resHeaders, HttpStatus.OK);
     }
 }
