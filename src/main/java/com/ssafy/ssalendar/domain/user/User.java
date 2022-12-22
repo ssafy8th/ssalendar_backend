@@ -28,7 +28,7 @@ public class User {
     private List<Alarm> alarm;
 
     //participant
-    
+
     //groupdef
 
     //calendar

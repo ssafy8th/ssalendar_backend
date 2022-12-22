@@ -1,4 +1,4 @@
-package com.ssafy.ssalendar.repository;
+package com.ssafy.ssalendar.repository.user;
 
 import com.ssafy.ssalendar.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
