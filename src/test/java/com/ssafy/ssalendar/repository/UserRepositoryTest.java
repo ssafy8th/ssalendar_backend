@@ -2,6 +2,7 @@ package com.ssafy.ssalendar.repository;
 
 import com.ssafy.ssalendar.domain.alarm.Alarm;
 import com.ssafy.ssalendar.domain.user.User;
+import com.ssafy.ssalendar.repository.user.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +23,9 @@ class UserRepositoryTest {
 
         find.ifPresent(seleceted -> {
             List<Alarm> li = seleceted.getAlarm();
-            System.out.println(li.get(0).getUser().getUserNo());
+            for (Alarm al: li) {
+                al.setAlarmTime("dddd");
+            }
         });
     }
 }
