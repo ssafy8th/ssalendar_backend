@@ -23,7 +23,7 @@ public class Participant {
     @Enumerated(EnumType.STRING)
     private ScheduleParticipationStatus scheduleParticipationStatus;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_no")
     private User user;
 }
