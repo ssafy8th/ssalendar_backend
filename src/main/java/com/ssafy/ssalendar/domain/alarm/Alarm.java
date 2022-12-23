@@ -20,8 +20,6 @@ public class Alarm {
     private Long alarmNo;
     private String alarmTime;
 
-    private Long scheduleNo;
-
     @ManyToOne
     @JoinColumn(name = "user_no")
     private User user;
