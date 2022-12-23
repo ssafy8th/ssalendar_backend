@@ -1,7 +1,6 @@
 package com.ssafy.ssalendar.domain.participant;
 
-import com.ssafy.ssalendar.domain.Schedule;
-import com.ssafy.ssalendar.domain.alarm.Alarm;
+import com.ssafy.ssalendar.domain.schedule.Schedule;
 import com.ssafy.ssalendar.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Data

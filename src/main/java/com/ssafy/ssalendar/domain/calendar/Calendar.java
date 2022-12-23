@@ -4,8 +4,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
-import com.ssafy.ssalendar.domain.Schedule;
-import com.ssafy.ssalendar.domain.alarm.Alarm;
+import com.ssafy.ssalendar.domain.schedule.Schedule;
 import com.ssafy.ssalendar.domain.group.Group;
 import com.ssafy.ssalendar.domain.user.User;
 
