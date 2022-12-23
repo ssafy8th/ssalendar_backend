@@ -10,5 +10,4 @@ public class GroupRepositoryImpl implements GroupRepositroyCumstom{
     public GroupRepositoryImpl(EntityManager em){
         this.queryFactory = new JPAQueryFactory(em);
     }
-
 }
