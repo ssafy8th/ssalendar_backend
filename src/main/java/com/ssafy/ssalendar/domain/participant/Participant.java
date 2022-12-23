@@ -1,5 +1,7 @@
 package com.ssafy.ssalendar.domain.participant;
 
+import com.ssafy.ssalendar.domain.Schedule;
+import com.ssafy.ssalendar.domain.alarm.Alarm;
 import com.ssafy.ssalendar.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -17,8 +20,10 @@ public class Participant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long participantNo;
-    private Long userNo;
-    private Long scheduleNo;
+
+    @ManyToOne
+    @JoinColumn(name = "schedule_no")
+    private Schedule schedule;
 
     @Enumerated(EnumType.STRING)
     private ScheduleParticipationStatus scheduleParticipationStatus;

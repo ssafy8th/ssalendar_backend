@@ -1,5 +1,6 @@
 package com.ssafy.ssalendar.domain.alarm;
 
+import com.ssafy.ssalendar.domain.Schedule;
 import com.ssafy.ssalendar.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,4 +25,8 @@ public class Alarm {
     @ManyToOne
     @JoinColumn(name = "user_no")
     private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "schedule_no")
+    private Schedule schedule;
 }

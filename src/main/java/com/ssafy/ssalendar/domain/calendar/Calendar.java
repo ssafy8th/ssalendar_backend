@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.ssafy.ssalendar.domain.Schedule;
 import com.ssafy.ssalendar.domain.alarm.Alarm;
 import com.ssafy.ssalendar.domain.group.Group;
 import com.ssafy.ssalendar.domain.user.User;
@@ -28,12 +29,12 @@ public class Calendar {
 	private CalendarStatus status;
 
 	@OneToMany(mappedBy = "calendar")
-//  @JoinColumn(name = "alarm_no")
-//	private List<Schedule> schedules;
-	private List<Group> groups;
+	private List<Group> group;
 
 	@ManyToOne
-	@JoinColumn(name = "calendar_no")
-	private Calendar calendar;
+	@JoinColumn(name = "user_no")
+	private User user;
 
+	@OneToMany(mappedBy = "calendar")
+	private List<Schedule> schedule;
 }
