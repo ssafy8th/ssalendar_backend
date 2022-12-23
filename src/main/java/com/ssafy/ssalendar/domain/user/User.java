@@ -1,6 +1,9 @@
 package com.ssafy.ssalendar.domain.user;
 
 import com.ssafy.ssalendar.domain.alarm.Alarm;
+import com.ssafy.ssalendar.domain.calendar.Calendar;
+import com.ssafy.ssalendar.domain.group.Group;
+import com.ssafy.ssalendar.domain.participant.Participant;
 import lombok.*;
 
 import javax.persistence.*;
@@ -28,8 +31,16 @@ public class User {
     private List<Alarm> alarm;
 
     //participant
+    @OneToMany(mappedBy = "user")
+    private List<Participant> participant;
 
     //groupdef
+    @OneToMany(mappedBy = "user")
+    private List<Group> group;
 
     //calendar
+    @OneToMany(mappedBy = "user")
+    private List<Calendar> calendar;
+
 }
+

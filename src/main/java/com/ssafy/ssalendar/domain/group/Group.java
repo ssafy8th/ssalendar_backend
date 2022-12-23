@@ -1,5 +1,6 @@
 package com.ssafy.ssalendar.domain.group;
 
+import com.ssafy.ssalendar.domain.calendar.Calendar;
 import com.ssafy.ssalendar.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,10 +27,13 @@ public class Group {
     private Long defNo;
 
     // 캘린더 매핑
-    private Long calendarNo;
+    @ManyToOne
+    @JoinColumn(name = "calendar_no")
+    private Calendar calendar;
 
     // 유저 매핑
-    @OneToMany(mappedBy = "user")
+    @ManyToOne
+    @JoinColumn(name = "user_no")
     private User user;
 
     @Enumerated(EnumType.STRING)
