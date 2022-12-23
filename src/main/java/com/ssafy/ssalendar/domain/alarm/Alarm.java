@@ -1,6 +1,6 @@
 package com.ssafy.ssalendar.domain.alarm;
 
-import com.ssafy.ssalendar.domain.Schedule;
+import com.ssafy.ssalendar.domain.schedule.Schedule;
 import com.ssafy.ssalendar.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;

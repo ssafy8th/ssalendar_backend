@@ -1,4 +1,4 @@
-package com.ssafy.ssalendar.domain;
+package com.ssafy.ssalendar.domain.schedule;
 
 
 import com.ssafy.ssalendar.domain.alarm.Alarm;
