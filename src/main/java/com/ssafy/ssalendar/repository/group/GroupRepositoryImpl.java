@@ -11,12 +11,4 @@ public class GroupRepositoryImpl implements GroupRepositroyCumstom{
     public GroupRepositoryImpl(EntityManager em){
         this.queryFactory = new JPAQueryFactory(em);
     }
-
-    @Override
-    public List<Long> go(){
-        return  queryFactory.select(user.userNo)
-                .from(user)
-//                .join()
-                .fetch();
-    }
 }
