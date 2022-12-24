@@ -14,7 +14,7 @@ class SsalendarApplicationTests {
 	private GroupRepository gr;
 	@Test
 	void contextLoads() {
-		System.out.println(gr.go().get(0));
+//		System.out.println(gr.go().get(0));
 	}
 
 }

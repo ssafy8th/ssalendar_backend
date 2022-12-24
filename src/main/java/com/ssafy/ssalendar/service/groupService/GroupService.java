@@ -1,6 +1,7 @@
 package com.ssafy.ssalendar.service.groupService;
 
 import com.ssafy.ssalendar.domain.user.User;
+import com.ssafy.ssalendar.dto.group.GroupUser;
 
 import java.util.List;
 
@@ -34,5 +35,5 @@ public interface GroupService {
      * @param chalendarNo 그룹의 유저들을 달력
      * @return 그룹 유저
      */
-    List<User> findByGroupUsers(Long chalendarNo);
+    List<GroupUser> findByGroupUsers(Long chalendarNo);
 }
